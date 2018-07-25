@@ -92,7 +92,12 @@ def winner(board)
 end
 
 def play(board)
-  until over?(board) == true
+  until over?(board)
     turn(board)
+end
+if won?(board)
+  puts "Congratulations #{winner(board)}, you won the game!"
+elsif draw?(board)
+  puts "Its a tie"
 end
 end
